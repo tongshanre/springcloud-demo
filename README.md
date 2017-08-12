@@ -1,2 +1,2 @@
-# springcloud
-存放springclouddemo
+# springcloud-demo
+SpringCloud Demo
