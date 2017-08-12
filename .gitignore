@@ -1,0 +1,12 @@
+/client/.idea/
+/client/target/
+/client/*.iml
+/eureka/.idea/
+/eureka/target/
+/eureka/*.iml
+/service/.idea/
+/service/target/
+/service/*.iml
+/service-zuul/.idea/
+/service-zuul/target/
+/service-zuul/*.iml

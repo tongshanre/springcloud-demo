@@ -1,0 +1,9 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: s-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eureka:http://localhost:8000/eureka/}
