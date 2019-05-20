@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: config-service
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/tongshanre/testgit
+          search-paths: config-repo
+          username: tongshanre@163.com
+          password: gaofei123
+        native:
+          search-locations: classpath:/configs
+    bus:
+      trace:
+        enabled: true
+      enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+server:
+  port: 5001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:5000/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,bus-refresh

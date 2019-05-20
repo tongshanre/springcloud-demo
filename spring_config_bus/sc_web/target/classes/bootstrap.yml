@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: web-service
+  profiles:
+    active: dev
+  cloud:
+    config:
+      discovery:
+        service-id: config-service
+      uri: http://localhost:5001
+      fail-fast: true
+    bus:
+      trace:
+        enabled: true
+      enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+server:
+  port: 5003
+eureka:
+  client:
+   serviceUrl:
+     defaultZone: http://localhost:5000/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,bus-refresh
